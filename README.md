@@ -9,15 +9,17 @@ Checking tons of imports of unpacked Locky Ransomware
 
 SOME BREAKPOINTS TO CHECK OUT FOR GENERIC UNPACKING
 
-CreateProcessInternalW  : Break on new Process created
+CreateProcessInternalW  : BreakPoint if there is any new Process created
 
-VirtualProtect : Break on memory protection changed
+VirtualProtect : BreakPoint incase malware is trying to override the protected section (PE Section)
 
 ResumeThread : Break on thread resumed (possible injection)
 
 VirtualAlloc : On return EAX has address of newly allocated memory segment. Follow in Dump to see if a PE is written to it.
 
 HASH : bf7114f025fff7dbc6b7aff8e4edb0dd8a7b53c3766429a3c5f10142609968f9
+
+BP on the end of the VirtualAlloc. Because newly allocated Virtual Memory Address is returned in EAX. So everytime VitualAlloc will hit (ret) we have to look EAX which will have newly allocated memory address in it.
 
 ![1](https://user-images.githubusercontent.com/107531426/205948045-d7ac7166-8a5b-4831-9161-582d133cd7a1.PNG)
 

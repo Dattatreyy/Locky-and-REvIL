@@ -24,3 +24,14 @@ BP on the end of the VirtualAlloc. Because newly allocated Virtual Memory Addres
 ![1](https://user-images.githubusercontent.com/107531426/205948045-d7ac7166-8a5b-4831-9161-582d133cd7a1.PNG)
 
 ![2](https://user-images.githubusercontent.com/107531426/205948074-d1ab46c3-8801-49d7-8daa-1d4871965d50.PNG)
+
+IAT
+
+![1](https://user-images.githubusercontent.com/107531426/205992902-71c27e91-a2b3-4e2e-9d64-ff4c9ad1cc71.PNG)
+![2](https://user-images.githubusercontent.com/107531426/205992944-3967b5ae-e323-489f-bfd7-e3a4a3ff35b5.PNG)
+![3](https://user-images.githubusercontent.com/107531426/205992972-d0c39ada-4d61-4e6a-a734-c8df3c7c42ef.PNG)
+![4](https://user-images.githubusercontent.com/107531426/205993018-a59788d7-d7ea-461e-963b-1ea69170d4aa.PNG)
+![5 one step over and the debugger will laber the IAT](https://user-images.githubusercontent.com/107531426/205993095-3b44fbf8-118a-4e1b-9fca-b7e159fa4a65.PNG)
+![6 Dump, IAT Autosearch and get imports and FIx dump](https://user-images.githubusercontent.com/107531426/205993120-d0e00ade-96c4-4487-b048-3f3fb63f66ec.PNG)
+![7](https://user-images.githubusercontent.com/107531426/205993146-0960868b-029b-4110-81c6-1faac6aaee73.PNG)
+

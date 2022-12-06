@@ -16,3 +16,9 @@ VirtualProtect : Break on memory protection changed
 ResumeThread : Break on thread resumed (possible injection)
 
 VirtualAlloc : On return EAX has address of newly allocated memory segment. Follow in Dump to see if a PE is written to it.
+
+HASH : bf7114f025fff7dbc6b7aff8e4edb0dd8a7b53c3766429a3c5f10142609968f9
+
+![1](https://user-images.githubusercontent.com/107531426/205948045-d7ac7166-8a5b-4831-9161-582d133cd7a1.PNG)
+
+![2](https://user-images.githubusercontent.com/107531426/205948074-d1ab46c3-8801-49d7-8daa-1d4871965d50.PNG)

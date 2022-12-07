@@ -1,10 +1,26 @@
-# Locky-Ransomware
-Checking tons of imports of unpacked Locky Ransomware
+# Locky-Ransomware  
+(Checking tons of imports of unpacked Locky Ransomware)
+
+Load the sample and go to the Entrypoint
 
 ![1](https://user-images.githubusercontent.com/107531426/205825766-f115fc1b-ac6c-4d7c-8446-0a828a9201f9.PNG)
+
+BreakPoint at the end of VirtualAlloc.. going to Entrypoint and running till we hit our BreakPoint. Doing StepOver on BP. 
+
+Dump the EAX and keep doing StepOver.
+
 ![2](https://user-images.githubusercontent.com/107531426/205825799-89fe2301-30bd-4afc-b038-0335cbbe2158.PNG)
 ![3](https://user-images.githubusercontent.com/107531426/205825835-8ed656c7-d1fd-46f4-8ead-8a946665735c.PNG)
+
+Keep Repeating the process untill you found the payload in the Dump. Run again if there is big loop in between and repeat again. Every new step over on BP need EAX dump
+
+Here we found our Payload. Dumping this binary to file.
+
 ![4](https://user-images.githubusercontent.com/107531426/205825855-861c9555-b34e-4c2d-ba43-64dd3320079b.PNG)
+
+Check the imports of Packed and Unpacked.. in packed they will be hiding imports. 
+It is one of famous evasion techniques malware authors follow.
+
 ![5](https://user-images.githubusercontent.com/107531426/205825941-9d088bf2-05cb-4af7-831b-48d0461dc5ef.PNG)
 
 SOME BREAKPOINTS TO CHECK OUT FOR GENERIC UNPACKING

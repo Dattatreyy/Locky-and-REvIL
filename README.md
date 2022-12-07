@@ -25,14 +25,17 @@ It is one of famous evasion techniques malware authors follow.
 <img width="800" alt="Capture" src="https://user-images.githubusercontent.com/107531426/205825941-9d088bf2-05cb-4af7-831b-48d0461dc5ef.PNG">
 
 SOME BREAKPOINTS TO CHECK OUT FOR GENERIC UNPACKING
+-----------------------------------------------------
 
-CreateProcessInternalW  : BreakPoint if there is any new Process created
+🤖CreateProcessInternalW  : BreakPoint if there is any new Process created
 
-VirtualProtect : BreakPoint incase malware is trying to override the protected section (PE Section)
+🤖VirtualProtect : BreakPoint incase malware is trying to override the protected section (PE Section)
 
-ResumeThread : Break on thread resumed (possible injection)
+🤖ResumeThread : Break on thread resumed (possible injection)
 
-VirtualAlloc : On return EAX has address of newly allocated memory segment. Follow in Dump to see if a PE is written to it.
+🤖VirtualAlloc : On return EAX has address of newly allocated memory segment. Follow in Dump to see if a PE is written to it.
+
+But here in the given sample we unpacked a malware sample (REvIL Ransomware) still we didn't found any Import Information. So in such cases weneed to build or find Import table dynamically or in simple terms we need to extract from binary.
 
 HASH : bf7114f025fff7dbc6b7aff8e4edb0dd8a7b53c3766429a3c5f10142609968f9
 

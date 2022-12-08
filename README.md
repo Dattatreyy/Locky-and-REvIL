@@ -35,6 +35,8 @@ SOME BREAKPOINTS TO CHECK OUT FOR GENERIC UNPACKING
 
 🤖VirtualAlloc : On return EAX has address of newly allocated memory segment. Follow in Dump to see if a PE is written to it.
 
+usually when the malware is packed, to perform unpacking it would first try to allocate some memory where it can write the unpacked data to.
+
 But here in the given sample we unpacked a malware sample (REvIL Ransomware) still we didn't found any Import Information. So in such cases weneed to build or find Import table dynamically or in simple terms we need to extract from binary.
 
 HASH : bf7114f025fff7dbc6b7aff8e4edb0dd8a7b53c3766429a3c5f10142609968f9
